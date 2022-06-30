@@ -1,0 +1,96 @@
+console.log("Example for node js app")
+var a = 5;
+var b = 10;
+c = a+b;
+console.log(c);
+console.log("addition" + c);
+var n=[1,2,3]
+n.forEach(myFunction);
+function myFunction(value){
+   console.log(value);
+}
+var n = [1,2,4]
+for(var x in n){
+   console.log(n[x]);
+}
+function alphabet_order(s)
+  {
+    return s.split('').sort().join(''); 
+  }
+console.log(alphabet_order("webmaster"));
+
+
+const myPenguin  = {name : "sofia",origin : "artic" , livingarea : "antartica"};
+console.log(myPenguin.name);
+console.log(myPenguin.origin);
+console.log(myPenguin.livingarea);
+
+function verifylogin(user,pwd,callback){
+if(pwd == "pwd1")
+    callback(null,"correct login");
+
+else
+    callback("incorrect login ",null );
+
+}
+verifylogin("user1","pwd2",function(err,result){
+    if(err){
+        console.log("err");
+    }
+    else{
+        console.log("result");
+    }
+})
+ verifylogin("user2","pwd3",(err,result) =>{
+     if(err){
+         console.log("err");
+     }
+     else{
+        console.log("result");
+    }
+ })
+
+console.log("program is strating");
+setTimeout(() => {
+    console.log("inside timeout")
+},2000);
+console.log("after timeout");
+console.log("progrmam ending");
+
+
+const chalk = require('chalk')
+const log = console.log;
+
+// Combine styled and normal strings
+log(chalk.blue('Hello') + ' World' + chalk.red('!'));
+
+// Compose multiple styles using the chainable API
+log(chalk.blue.bgRed.bold('Hello world!'));
+
+// Pass in multiple arguments
+log(chalk.blue('Hello', 'World!', 'Foo', 'bar', 'biz', 'baz'));
+
+// Nest styles
+log(chalk.red('Hello', chalk.underline.bgBlue('world') + '!'));
+
+// Nest styles of the same type even (color, underline, background)
+log(chalk.green(
+	'I am a green line ' +
+	chalk.blue.underline.bold('with a blue substring') +
+	' that becomes green again!'
+));
+
+// ES2015 template literal
+log(`
+CPU: ${chalk.red('90%')}
+RAM: ${chalk.green('40%')}
+DISK: ${chalk.yellow('70%')}
+`);
+
+// Use RGB colors in terminal emulators that support it.
+log(chalk.rgb(123, 45, 67).underline('Underlined reddish color'));
+log(chalk.hex('#DEADED').bold('Bold gray!'));
+
+
+const chalk =require('chalk')
+console.log(chalk.blue('Hello world!'));
